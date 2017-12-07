@@ -3177,6 +3177,28 @@ label monika_hypnosis:
     m "What about you, hmm? What do you think about my eyes~?"
     m 2a "Will you be hypnotized by them~?"
     return
+    
+    init 5 python:
+    for key in ['Romans', 'Roman Empire', 'Rome' ]:
+        monika_topics.setdefault(key,[])
+        monika_topics[key].append('monika_Rome')
+    monika_random_topics.append('monika_Rome')
+
+label monika_Rome:
+    m 2a "What do you think about Romans, [player]?"
+    m "Are you familiar with hypnosis?"
+    m 2b "Despite it having a reputation as a hokey magic trick, there are studies that show it can work!"
+    m 1d "At least, to some degree."
+    m "It only worked if the person let themselves be hypnotized, and it only heightened their ability to be persuaded."
+    m 4a "It also relied on them being put into states of extreme relaxation through aromatherapy, deep tissue massage..."
+    m "Exposure to relaxing music and images..."
+    m "Things like that."
+    m 5a "It makes me wonder, what exactly can someone be persuaded to do under that kind of influence..."
+    m 1e "Not that I would do that to you, [player]! I just find it interesting to think about."
+    m "...You know, [player], I just love looking into your eyes, I could sit here and stare forever."
+    m "What about you, hmm? What do you think about my eyes~?"
+    m 2a "Will you be hypnotized by them~?"
+    return
 
 init 5 python:
     for key in ['motivation', 'fresh start', 'depression advice']:
